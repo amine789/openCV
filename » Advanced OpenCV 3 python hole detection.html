@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)https://www.kurokesu.com/main/2016/07/25/advanced-opencv-3-python-hole-detection/ -->
+<html lang="en-US" class="slb slb_overlay"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script async="" src="./» Advanced OpenCV 3 python hole detection_files/analytics.js.téléchargement"></script><script id="facebook-jssdk" src="./» Advanced OpenCV 3 python hole detection_files/sdk.js.téléchargement"></script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="profile" href="http://gmpg.org/xfn/11">
+        <link rel="pingback" href="https://www.kurokesu.com/main/xmlrpc.php">
+        <title> » Advanced OpenCV 3 python hole detection</title>
+        <link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://secure.gravatar.com/">
+<link rel="dns-prefetch" href="https://platform-api.sharethis.com/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="KUROKESU » Feed" href="https://www.kurokesu.com/main/feed/">
+<link rel="alternate" type="application/rss+xml" title="KUROKESU » Comments Feed" href="https://www.kurokesu.com/main/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="KUROKESU » Advanced OpenCV 3 python hole detection Comments Feed" href="https://www.kurokesu.com/main/2016/07/25/advanced-opencv-3-python-hole-detection/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.kurokesu.com\/main\/wp-includes\/js\/wp-emoji-release.min.js?ver=ecfef19fa0ed3787d1cba6cbb23db727"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./» Advanced OpenCV 3 python hole detection_files/wp-emoji-release.min.js.téléchargement" type="text/javascript" defer=""></script><div id="LKfck"></div>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="dlm-frontend-css" href="./» Advanced OpenCV 3 python hole detection_files/frontend.css" type="text/css" media="all">
+<link rel="stylesheet" id="mythemes-google-fonts-css" href="./» Advanced OpenCV 3 python hole detection_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="mythemes-icons-css" href="./» Advanced OpenCV 3 python hole detection_files/icons.css" type="text/css" media="all">
+<link rel="stylesheet" id="mythemes-effects-css" href="./» Advanced OpenCV 3 python hole detection_files/effects.css" type="text/css" media="all">
+<link rel="stylesheet" id="mythemes-header-css" href="./» Advanced OpenCV 3 python hole detection_files/header.css" type="text/css" media="all">
+<link rel="stylesheet" id="mythemes-animation-css" href="./» Advanced OpenCV 3 python hole detection_files/animation.css" type="text/css" media="all">
+<link rel="stylesheet" id="mythemes-bootstrap-min-css" href="./» Advanced OpenCV 3 python hole detection_files/bootstrap.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="mythemes-typography-css" href="./» Advanced OpenCV 3 python hole detection_files/typography.css" type="text/css" media="all">
+<link rel="stylesheet" id="mythemes-navigation-css" href="./» Advanced OpenCV 3 python hole detection_files/navigation.css" type="text/css" media="all">
+<link rel="stylesheet" id="mythemes-nav-css" href="./» Advanced OpenCV 3 python hole detection_files/nav.css" type="text/css" media="all">
+<link rel="stylesheet" id="mythemes-jscrollpane-css" href="./» Advanced OpenCV 3 python hole detection_files/jquery.jscrollpane.css" type="text/css" media="all">
+<link rel="stylesheet" id="mythemes-blog-css" href="./» Advanced OpenCV 3 python hole detection_files/blog.css" type="text/css" media="all">
+<link rel="stylesheet" id="mythemes-forms-css" href="./» Advanced OpenCV 3 python hole detection_files/forms.css" type="text/css" media="all">
+<link rel="stylesheet" id="mythemes-elements-css" href="./» Advanced OpenCV 3 python hole detection_files/elements.css" type="text/css" media="all">
+<link rel="stylesheet" id="mythemes-pretty-photo-css" href="./» Advanced OpenCV 3 python hole detection_files/prettyPhoto.css" type="text/css" media="all">
+<link rel="stylesheet" id="mythemes-gallery-css" href="./» Advanced OpenCV 3 python hole detection_files/gallery.css" type="text/css" media="all">
+<link rel="stylesheet" id="mythemes-widgets-css" href="./» Advanced OpenCV 3 python hole detection_files/widgets.css" type="text/css" media="all">
+<link rel="stylesheet" id="mythemes-footer-css" href="./» Advanced OpenCV 3 python hole detection_files/footer.css" type="text/css" media="all">
+<link rel="stylesheet" id="mythemes-plugins-css" href="./» Advanced OpenCV 3 python hole detection_files/plugins.css" type="text/css" media="all">
+<link rel="stylesheet" id="mythemes-style-css" href="./» Advanced OpenCV 3 python hole detection_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="mythemes-single-portfolio-css" href="./» Advanced OpenCV 3 python hole detection_files/single-portfolio.css" type="text/css" media="all">
+<link rel="stylesheet" id="mythemes-comments-css" href="./» Advanced OpenCV 3 python hole detection_files/comments.css" type="text/css" media="all">
+<link rel="stylesheet" id="mythemes-comments-typography-css" href="./» Advanced OpenCV 3 python hole detection_files/comments-typography.css" type="text/css" media="all">
+<link rel="stylesheet" id="slb_core-css" href="./» Advanced OpenCV 3 python hole detection_files/app.css" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack_css-css" href="./» Advanced OpenCV 3 python hole detection_files/jetpack.css" type="text/css" media="all">
+<script type="text/javascript" src="./» Advanced OpenCV 3 python hole detection_files/jquery.js.téléchargement"></script>
+<script type="text/javascript" src="./» Advanced OpenCV 3 python hole detection_files/jquery-migrate.min.js.téléchargement"></script>
+<script type="text/javascript" src="./» Advanced OpenCV 3 python hole detection_files/sharethis.js.téléchargement"></script>
+<link rel="https://api.w.org/" href="https://www.kurokesu.com/main/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.kurokesu.com/main/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.kurokesu.com/main/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Microscope lens for SMD inspection" href="https://www.kurokesu.com/main/2016/07/19/review-microscope-lens-for-smd-inspection/">
+<link rel="next" title="OpenCV 3 Python blur detection" href="https://www.kurokesu.com/main/2016/07/27/opencv-3-python-blur-detection/">
+
+<link rel="canonical" href="https://www.kurokesu.com/main/2016/07/25/advanced-opencv-3-python-hole-detection/">
+<link rel="shortlink" href="https://wp.me/p6VSmB-98">
+<link rel="alternate" type="application/json+oembed" href="https://www.kurokesu.com/main/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.kurokesu.com%2Fmain%2F2016%2F07%2F25%2Fadvanced-opencv-3-python-hole-detection%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.kurokesu.com/main/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.kurokesu.com%2Fmain%2F2016%2F07%2F25%2Fadvanced-opencv-3-python-hole-detection%2F&amp;format=xml">
+
+<script type="text/javascript">
+	function addHandler(object, event, handler) {
+		if (typeof object.addEventListener != 'undefined') 
+			object.addEventListener(event, handler, false);
+		else
+			if (typeof object.attachEvent != 'undefined')
+				object.attachEvent('on' + event, handler);
+			else 
+				throw 'Incompatible browser';
+	}
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//www.kurokesu.com/main/?wordfence_lh=1&hid=E8791FDD0E5DFAA1DA8790A6DB02F38E');
+</script>
+<link rel="dns-prefetch" href="https://v0.wordpress.com/">
+<style type="text/css">img#wpstats{display:none}</style><!--[if IE]>
+<link rel="stylesheet" type="text/css" href="https://www.kurokesu.com/main/wp-content/themes/treeson_/media/_frontend/css/ie.css" />
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://www.kurokesu.com/main/wp-content/themes/treeson_/media/_frontend/js/html5shiv.min.js"></script>
+  <script src="https://www.kurokesu.com/main/wp-content/themes/treeson_/media/_frontend/js/respond.min.js"></script>
+<![endif]--><style type="text/css" id="mythemes-background-color">
+
+    /* BACKGROUND COLOR */
+    body > div.content,
+    body footer aside{
+        background-color: #ffffff;
+    }
+
+
+    /* MENU NAVIGATION */
+    /* BACKGROUND COLOR */
+    body.scroll-nav .mythemes-poor{
+        background-color: rgba( 255,255,255 , 0.91 );
+    }
+    .mythemes-poor{
+        background-color: #ffffff;
+    }
+</style>
+
+
+
+    
+    <style type="text/css" title="text/css" media="all" id="mythemes-header-mask-bkg-color">
+        div.mythemes-header div.mythemes-header-mask{
+            background-color: rgba( 48,48,48, 0.55 );
+        }
+    </style>
+
+    
+    
+    <style type="text/css" title="text/css" media="all" id="mythemes-header-mask-bkg-image">
+        div.mythemes-header div.mythemes-header-mask{
+            
+        }
+    </style>
+
+
+
+
+
+    
+    <style type="text/css" title="text/css" media="all" id="mythemes-header-btn-1-bkg-color">
+        .header-button-wrapper a.btn.first-btn.header-button{
+            background-color: rgba( 221,24,24, 0.61 );
+        }
+        .header-button-wrapper a.btn.first-btn.header-button:hover{
+            background-color: rgba( 255,255,255, 0.03 );
+        }
+    </style>
+
+    
+    
+    <style type="text/css" title="text/css" media="all" id="mythemes-header-btn-1-border">
+        .header-button-wrapper a.btn.first-btn.header-button{
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgba( 255,255,255, 0.20 );
+        }
+        .header-button-wrapper a.btn.first-btn.header-button:hover{
+            border-color: rgba( 255,255,255, 0.70 );
+        }
+    </style>
+
+
+
+
+
+    
+    <style type="text/css" title="text/css" media="all" id="mythemes-header-btn-2-bkg-color">
+        .header-button-wrapper a.btn.second-btn.header-button{
+            background-color: rgba( 255,255,255, 0.10 );
+        }
+        .header-button-wrapper a.btn.second-btn.header-button:hover{
+            background-color: rgba( 255,255,255, 0.03 );
+        }
+    </style>
+
+    
+    
+    <style type="text/css" title="text/css" media="all" id="mythemes-header-btn-2-border">
+        .header-button-wrapper a.btn.second-btn.header-button{
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgba( 255,255,255, 0.20 );
+        }
+        .header-button-wrapper a.btn.second-btn.header-button:hover{
+            border-color: rgba( 255,255,255, 0.70 );
+        }
+    </style>
+
+
+
+
+
+    
+    <style type="text/css" title="text/css" media="all" id="mythemes-header-btn-3-bkg-color">
+        .header-button-wrapper a.btn.third-btn.header-button{
+            background-color: rgba( 255,255,255, 0.10 );
+        }
+        .header-button-wrapper a.btn.third-btn.header-button:hover{
+            background-color: rgba( 255,255,255, 0.03 );
+        }
+    </style>
+
+    
+    
+    <style type="text/css" title="text/css" media="all" id="mythemes-header-btn-3-border">
+        .header-button-wrapper a.btn.third-btn.header-button{
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgba( 255,255,255, 0.20 );
+        }
+        .header-button-wrapper a.btn.third-btn.header-button:hover{
+            border-color: rgba( 255,255,255, 0.70 );
+        }
+    </style>
+
+
+
+
+
+    
+    <style type="text/css" title="text/css" media="all" id="mythemes-header-btn-4-bkg-color">
+        .header-button-wrapper a.btn.fourth-btn.header-button{
+            background-color: rgba( 255,255,255, 0.10 );
+        }
+        .header-button-wrapper a.btn.fourth-btn.header-button:hover{
+            background-color: rgba( 255,255,255, 0.03 );
+        }
+    </style>
+
+    
+    
+    <style type="text/css" title="text/css" media="all" id="mythemes-header-btn-4-border">
+        .header-button-wrapper a.btn.fourth-btn.header-button{
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgba( 255,255,255, 0.20 );
+        }
+        .header-button-wrapper a.btn.fourth-btn.header-button:hover{
+            border-color: rgba( 255,255,255, 0.70 );
+        }
+    </style>
+
+
+
+
+    <style type="text/css" title="text/css" media="all" id="mythemes-breadcrumbs-space">
+        div.mythemes-page-header{
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    </style>
+
+
+
+
+    
+    <style type="text/css" title="text/css" media="all" id="mythemes-color-1">  
+        
+        nav.base-nav ul li a,
+        div.widget-grofile.grofile a.grofile-full-link{
+            color: #6c6c6c;
+        }
+
+        nav.base-nav ul li:hover > a,
+        nav.base-nav ul li > a:hover,
+        div.widget-grofile.grofile a.grofile-full-link:hover{
+            color: #000000;
+        }
+
+        div.mythemes_widget_portfolio_collections a{
+            border-color: #303030;
+            color: #303030;
+        }
+
+
+        /* COMMENTS */
+        div.comments-list > ol li.pingback header cite a:hover,
+        div.comments-list > ol li.comment header cite a:hover{
+            color: #4e4e4e;
+        }
+
+        /* BUTTONS */
+        /* CLASSES */
+        .btn,
+        .button,
+        .mythemes-button,
+
+        /* FORMS */
+        button,
+        input[type="submit"],
+        input[type="button"],
+
+        /* POST / PAGE CONTENT */
+        .hentry button,
+        .hentry input[type="button"],
+        .hentry input[type="submit"],
+        
+        /* WIDGETS */
+        div.widget_calendar table th,
+        div.widget_post_meta ul li span.post-tag,
+
+        /* POST META */
+        article div.post-meta-tags a:hover,
+        article div.post-meta-categories a,
+
+        /* COMMENTS */
+        div#comments  p.form-submit input[type="submit"],
+
+        /* PAGINATION */
+        div.pagination nav span{
+            background-color: #303030;
+        }
+
+        /* BUTTONS */
+        /* BORDER BOTTOM */
+        /* CLASSES */
+        .btn,
+        .button,
+        .mythemes-button,
+
+        /* FORMS */
+        button,
+        input[type="submit"],
+        input[type="button"],
+
+        /* POST CONTENT */
+        .hentry button,
+        .hentry input[type="button"],
+        .hentry input[type="submit"],
+
+        /* POST META */
+        div.widget_post_meta ul li span.post-tag,
+
+        /* POST META */
+        article div.post-meta-tags a:hover,
+        article div.post-meta-categories a,
+
+        /* COMMENTS */
+        div#comments  p.form-submit input[type="submit"],
+
+        /* PAGINATION */
+        div.pagination nav span{
+            border-bottom: 1px solid #080808;
+        }
+
+        /* BLOG */
+        div.pagination nav a,
+        article div.meta,
+        article div.meta a,
+        article a.more-link:hover,
+        article div.meta ul.post-categories li a{
+            color: #303030;
+        }
+        article div.meta ul.post-categories li a:hover{
+            background-color: #303030;
+        }
+        article a.more-link:hover{
+            border: 3px solid #303030;
+        }
+
+        /* STIKY */
+        article.sticky a.more-link{
+            background: #303030;
+            border: 3px solid #303030;
+        }
+        article.sticky a.more-link:hover{
+            color: #303030;
+        }
+    </style>
+
+
+
+
+    
+    <style type="text/css" title="text/css" media="all" id="mythemes-color-2">
+        nav.base-nav ul li.current-menu-item > a{
+            color: #4e4e4e;
+        }
+
+        /* HOVER COLOR */
+        a:hover,
+
+        /* META */
+        article div.meta a:hover{
+            color: #4e4e4e;
+        }
+
+        /* SECOND BUTTONS */
+        /* CLASSES */
+        .btn.second-button,
+        .button.second-button,
+        .mythemes-button.second-button,
+
+        /* MENU */
+        .mythemes-collapse-button button.btn-base-nav,
+
+        /* WIDGETS */
+        div.tagcloud a,
+        div.widget_newsletter form button[type="submit"],
+
+        /* COMMENTS */
+        div.comment-respond h3.comment-reply-title small a,
+        
+        /* POST META */
+        article div.post-meta-categories a:hover,
+        article div.post-meta-tags a{
+            background-color: #303030;
+        }
+
+        /* SECOND BUTTONS */
+        /* BORDER BOTTOM */
+        /* CLASSES */
+        .btn.second-button,
+        .button.second-button,
+        .mythemes-button.second-button,
+
+        /* MENU */
+        .mythemes-collapse-button button.btn-base-nav,
+
+        /* WIDGETS */
+        div.tagcloud a,
+        div.widget_newsletter form button[type="submit"],
+
+        /* POST META */
+        article div.post-meta-tags a,
+        article div.post-meta-categories a:hover,
+
+        /* COMMENTS */
+        div.comment-respond h3.comment-reply-title small a{
+            border-bottom: 1px solid #080808;
+        }
+    </style>
+
+
+
+
+    
+    <style type="text/css" title="text/css" media="all" id="mythemes-color-3">
+        /* LINK */
+        a,
+
+        /* WIDGETS */
+        div.widget ul li a:hover,
+        div.widget_calendar table td a:hover,
+        div.widget_categories ul li a:hover,
+        div.widget_recent_comments_with_avatar ul li h5 a:hover{
+            color: #4e4e4e;
+        }
+        div.mythemes_widget_portfolio_collections a:hover{
+            border-color: #303030;
+            color: #303030;
+        }
+
+
+        /* POST TITLE HEADLINE */
+        .hentry h2 a:hover,
+        article h2 a:hover,
+        .mythemes-portfolio .portfolio-antet h3 a:hover,
+        .mythemes-portfolio .portfolio-item h4 a:hover{
+            color: #303030;
+        }
+    </style>
+
+
+        <style type="text/css" title="text/css" media="all" id="mythemes-tools-icon-color">
+        div.mythemes-tools nav.contact-nav li i,
+        div.mythemes-tools nav.contact-nav li i:before{
+            color: #303030;
+        }
+    </style>
+
+        <style type="text/css" title="text/css" media="all" id="mythemes-tools-label-color">
+        div.mythemes-tools nav.contact-nav li a,
+        div.mythemes-tools nav.contact-nav li span{
+            color: #999999;
+        }
+    </style>
+
+        <style type="text/css" title="text/css" media="all" id="mythemes-tools-label-h-color">
+        div.mythemes-tools nav.contact-nav li a:hover{
+            color: #ffffff;
+        }
+    </style>
+
+
+
+
+
+    
+    
+    <style type="text/css" title="text/css" media="all" id="mythemes-footer-bkg-color">
+        body {
+            background-color: rgba( 48,48,48, 1.00 );
+        }
+        footer .mythemes-black-side{
+            background-color: rgba( 48,48,48, 1.00 );
+        }
+    </style>
+
+    
+    
+    <style type="text/css" title="text/css" media="all" id="mythemes-footer-bkg-image">
+        footer .mythemes-black-side{
+            
+        }
+    </style>
+
+
+
+
+    <style type="text/css" title="text/css" media="all" id="mythemes-footer-copy-space">
+        footer .mythemes-copyright{
+            padding-top: 35px;
+            padding-bottom: 35px;
+        }
+    </style>
+
+
+    
+    
+    <style type="text/css" title="text/css" media="all" id="mythemes-footer-copy-text-color">
+        footer .mythemes-black-side .mythemes-copyright p{
+            color: #939aa2;
+        }
+    </style>
+
+    
+    
+    <style type="text/css" title="text/css" media="all" id="mythemes-footer-copy-link-color">
+        footer .mythemes-black-side .mythemes-copyright a{
+            color: #cad1d9;
+        }
+    </style>
+
+    
+    
+    <style type="text/css" title="text/css" media="all" id="mythemes-footer-copy-link-h-color">
+        footer .mythemes-black-side .mythemes-copyright a:hover{
+            color: #f2f9ff;
+        }
+    </style>
+
+    
+    
+    <style type="text/css" title="text/css" media="all" id="mythemes-footer-copy-bkg-color">
+        footer .mythemes-copyright{
+            background-color: rgba( 0,0,0, 0.00 );
+        }
+    </style>
+
+    
+    
+    <style type="text/css" title="text/css" media="all" id="mythemes-footer-copy-bkg-image">
+        footer .mythemes-copyright{
+            
+        }
+    </style>
+
+
+
+
+    <style type="text/css" title="text/css" media="all" id="mythemes-footer-menu-space">
+        footer .mythemes-menu{
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+    </style>
+
+    
+    
+    <style type="text/css" title="text/css" media="all" id="mythemes-footer-menu-link-color">
+        footer .mythemes-black-side .mythemes-menu a{
+            color: #939aa2;
+        }
+
+        footer .mythemes-menu nav > ul > li,
+        footer .mythemes-menu nav div > ul > li{
+            border-color: rgba( 147,154,162, 0.5 );
+        }
+    </style>
+
+    
+    
+    <style type="text/css" title="text/css" media="all" id="mythemes-footer-menu-link-h-color">
+        footer .mythemes-black-side .mythemes-menu a:hover{
+            color: #cad1d9;
+        }
+    </style>
+
+    
+    
+    <style type="text/css" title="text/css" media="all" id="mythemes-footer-menu-bkg-color">
+        footer .mythemes-black-side .mythemes-menu{
+            background-color: rgba( 0,0,0, 0.20 );
+        }
+    </style>
+
+    
+    
+    <style type="text/css" title="text/css" media="all" id="mythemes-footer-menu-bkg-image">
+        footer .mythemes-black-side .mythemes-menu{
+            
+        }
+    </style>
+
+
+
+
+    <style type="text/css" title="text/css" media="all" id="mythemes-custom-css">
+            </style>
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Advanced OpenCV 3 python hole detection">
+<meta property="og:url" content="https://www.kurokesu.com/main/2016/07/25/advanced-opencv-3-python-hole-detection/">
+<meta property="og:description" content="OpenCV is a well known computer vision library used as base framework used by major companies like Google, IBM, Sony and numerous others. It enables quick vision based tool development and results …">
+<meta property="article:published_time" content="2016-07-25T05:23:45+00:00">
+<meta property="article:modified_time" content="2016-09-01T18:36:48+00:00">
+<meta property="og:site_name" content="KUROKESU">
+<meta property="og:image" content="https://www.kurokesu.com/main/wp-content/uploads/2016/07/centers.png">
+<meta property="og:image:width" content="1903">
+<meta property="og:image:height" content="1071">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:text:title" content="Advanced OpenCV 3 python hole detection">
+<meta name="twitter:image" content="https://www.kurokesu.com/main/wp-content/uploads/2016/07/centers.png?w=640">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="icon" href="https://www.kurokesu.com/main/wp-content/uploads/2015/11/icon2_tr.png" sizes="32x32">
+<link rel="icon" href="https://www.kurokesu.com/main/wp-content/uploads/2015/11/icon2_tr.png" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="https://www.kurokesu.com/main/wp-content/uploads/2015/11/icon2_tr.png">
+<meta name="msapplication-TileImage" content="https://www.kurokesu.com/main/wp-content/uploads/2015/11/icon2_tr.png">
+			<style type="text/css" id="wp-custom-css">
+				/*
+You can add your own CSS here.
+
+Click the help icon above to learn more.
+*/
+
+/* LINK */
+        a,
+
+        /* WIDGETS */
+        div.widget ul li a:hover,
+        div.widget_calendar table td a:hover,
+        div.widget_categories ul li a:hover,
+        div.widget_recent_comments_with_avatar ul li h5 a:hover{
+            color: #880000;
+        }
+        div.mythemes_widget_portfolio_collections a:hover{
+            border-color: #303030;
+            color: #303030;
+        }
+
+
+        /* POST TITLE HEADLINE */
+        .hentry h2 a:hover,
+        article h2 a:hover,
+        .mythemes-portfolio .portfolio-antet h3 a:hover,
+        .mythemes-portfolio .portfolio-item h4 a:hover{
+            color: #303030;
+        }			</style>
+		    <script type="text/javascript" async="" src="./» Advanced OpenCV 3 python hole detection_files/saved_resource"></script><style type="text/css">#most-visited { display: none }</style><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="./» Advanced OpenCV 3 python hole detection_files/hovercard.min.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="./» Advanced OpenCV 3 python hole detection_files/services.min.css"><link rel="stylesheet" type="text/css" href="./» Advanced OpenCV 3 python hole detection_files/style(1).css"><link rel="stylesheet" type="text/css" href="./» Advanced OpenCV 3 python hole detection_files/style(2).css"><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#1d3c78;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2_mobile_chat_started{animation-duration:300ms;animation-name:fb_bounce_in_v2_mobile_chat_started;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2_mobile_chat_started{animation-duration:300ms;animation-name:fb_bounce_out_v2_mobile_chat_started;transition-timing-function:ease-in}.fb_customer_chat_bubble_pop_in{animation-duration:250ms;animation-name:fb_customer_chat_bubble_bounce_in_animation}.fb_customer_chat_bubble_animated_no_badge{box-shadow:0 3px 12px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_no_badge:hover{box-shadow:0 5px 24px rgba(0, 0, 0, .3)}.fb_customer_chat_bubble_animated_with_badge{box-shadow:-5px 4px 14px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_with_badge:hover{box-shadow:-5px 8px 24px rgba(0, 0, 0, .2)}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_mobile_overlay_active{background-color:#fff;height:100%;overflow:hidden;position:fixed;visibility:hidden;width:100%}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_v2_mobile_chat_started{0%{opacity:0;top:20px}100%{opacity:1;top:0}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_v2_mobile_chat_started{0%{opacity:1;top:0}100%{opacity:0;top:20px}}@keyframes fb_customer_chat_bubble_bounce_in_animation{0%{bottom:6pt;opacity:0;transform:scale(0, 0);transform-origin:center}70%{bottom:18pt;opacity:1;transform:scale(1.2, 1.2)}100%{transform:scale(1, 1)}}</style><script type="text/javascript">
+(function() {
+	(function (i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+		a = s.createElement(o),
+			m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script', 'https://google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-69833630-1', 'auto');
+			ga('send', 'pageview');
+	})();
+
+</script></head>
+    <body class="post-template-default single single-post postid-566 single-format-standard scroll-nav">
+
+                        <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./» Advanced OpenCV 3 python hole detection_files/7LloFuHvA7I.html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+                <script>
+                    (function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s); js.id = id;
+                        js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=252156114891794&version=v2.3";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
+                </script>
+        
+        <header>
+            <div class="mythemes-header parallax-container overflow-wrapper" style="height: 330px;">
+    
+    <div class="valign-cell-wrapper mythemes-header-mask">
+        <div class="valign-cell-wrapper header-headline-wrapper" style="height: 228px;">
+ 
+            <div class="valign-cell">
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <!-- BLOG ITENTITY: LOGO, TITLE, DESCRIPTION -->
+                        <div class="text-center">
+                            <a class="mythemes-blog-logo " href="https://www.kurokesu.com/main/" title="KUROKESU - Quality, applied" target="_self" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px;     padding-left: 0px;"><img src="./» Advanced OpenCV 3 python hole detection_files/logow_9.png" alt="KUROKESU - Quality, applied"></a>                        </div>
+
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="valign-bottom-cell-wrapper header-button-wrapper" style="height: 102px;">
+        <div class="valign-cell">
+        <a href="https://www.kurokesu.com/shop/" class="btn first-btn header-button " title="Kurokesu e-shop">E-STORE</a><a href="https://www.kurokesu.com/main/blog" class="btn second-btn header-button " title="Recent Kurokesu blog entries">BLOG</a><a href="https://www.kurokesu.com/main/resources/" class="btn third-btn header-button " title="Product specifications and information">RESOURCES</a><a href="https://www.kurokesu.com/shop/index.php?route=information/contact" class="btn fourth-btn header-button " title="Contacts">CONTACTS</a>        </div>
+    </div>
+
+    <div class="mythemes-covered" style="background-image: url(https://www.kurokesu.com/main/wp-content/uploads/2018/09/IMG_7050_.jpg);"></div></div>
+            
+            
+            <div class="mythemes-poor">
+                <div class="container">
+                                    <div class="row">
+                        <div class="col-sm-12 col-md-offset-6 col-md-6">
+                            <div id="search-3" class="widget widget_search"><form action="https://www.kurokesu.com/main/" method="get" id="searchform">
+    <fieldset>
+        <div id="searchbox">
+            <input type="text" name="s" id="keywords" value="type here..." onfocus="if (this.value == &#39;type here...&#39;) {this.value = &#39;&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;type here...&#39;;}">
+            <button type="submit"><i class="mythemes-icon-search-5"></i></button>
+        </div>
+    </fieldset>
+</form></div>                        </div>
+                    </div>
+                
+            </div>
+        </div></header>
+
+                
+    <div class="content">
+        <div class="container">
+            <div class="row">
+
+                            <!-- CONTENT -->
+                <section class="col-sm-8 col-md-9 col-lg-9">
+
+                <div class="content-border right">                            <article class="post-566 post type-post status-publish format-standard has-post-thumbnail hentry category-how-to category-projects tag-computer-vision tag-opencv tag-usb-camera">
+
+                                <!-- TITLE -->
+                                <h1 class="post-title">Advanced OpenCV 3 python hole detection</h1>
+                          
+                                <!-- TOP META : AUTHOR / TIME / COMMENTS -->
+                                <div class="meta">
+    
+    <!-- GET FIRST 2 CATEGORIES -->
+    <ul class="post-categories"><li><a href="https://www.kurokesu.com/main/category/how-to/" rel="category" target="_self">How To</a></li><li><a href="https://www.kurokesu.com/main/category/projects/" rel="category" target="_self">Projects</a></li></ul>
+    <!-- AUTHOR -->
+    
+    <!-- DATE -->
+        <time datetime="2016-07-25">on 2016-07-25</time>
+
+    <!-- COMMENTS -->
+    <a class="comments" href="https://www.kurokesu.com/main/2016/07/25/advanced-opencv-3-python-hole-detection/#comments" target="_self">6 Comments</a></div>
+                                
+                                <!-- CONTENT -->
+                                <p style="text-align: justify;"><a href="https://www.kurokesu.com/main/wp-content/uploads/2016/07/centers.png" data-slb-active="1" data-slb-asset="555573004" data-slb-internal="0" data-slb-group="566"><img class="alignleft wp-image-569 size-medium" src="./» Advanced OpenCV 3 python hole detection_files/centers-300x169.png" alt="centers" width="300" height="169" srcset="https://www.kurokesu.com/main/wp-content/uploads/2016/07/centers-300x169.png 300w, https://www.kurokesu.com/main/wp-content/uploads/2016/07/centers-768x432.png 768w, https://www.kurokesu.com/main/wp-content/uploads/2016/07/centers-1024x576.png 1024w" sizes="(max-width: 300px) 100vw, 300px"></a><a href="http://opencv.org/">OpenCV</a> is a well known computer vision library used as base framework used by major companies like Google, IBM, Sony and numerous others. It enables quick vision based tool development and results can be seen in a minutes after starting to code. This time I will show how to find round blobs (for example fiducial marks or holes on PCB). There are many ways to accomplish this task, but many of them don’t produce stable results. After many hours of research I stumbled on<strong> SimpleBlobDetector</strong>.</p>
+<p style="text-align: justify;">For this experiment I will be using standard <strong>Python 2.7</strong> installation and <strong>OpenCV 3.1</strong> library. OpenCV can be installed numerous ways, for Windows feel free to install from official OpenCV page (<a href="http://docs.opencv.org/2.4/doc/tutorials/introduction/windows_install/windows_install.html">requires more steps to get started</a>) or download from <a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/">Unofficial Windows Binaries for Python Extension Packages</a> and install with command like this:</p>
+<pre style="text-align: justify;">pip install opencv_python-3.1.0-cp27-cp27m-win32.whl</pre>
+<div id="attachment_576" style="width: 510px" class="wp-caption aligncenter"><a href="./» Advanced OpenCV 3 python hole detection_files/out.gif" data-slb-active="1" data-slb-asset="457117210" data-slb-internal="0" data-slb-group="566"><img class="wp-image-576 size-full" src="./» Advanced OpenCV 3 python hole detection_files/out.gif" alt="out" width="500" height="281"></a><p class="wp-caption-text">Detection results</p></div>
+<p style="text-align: justify;">Script is provided below and hosted on Github. To start experimenting supply video file and adjust parameters if needed. Code is pretty simple and requires no more explanation (hopefully).</p>
+<p><script src="./» Advanced OpenCV 3 python hole detection_files/937b3eab8c4547a65c778324764b28e1.js.téléchargement"></script><link rel="stylesheet" href="./» Advanced OpenCV 3 python hole detection_files/gist-embed-1564cdcc2939872e81719982075d3d93.css"></p><div id="gist38127262" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-detect-py" class="file">
+    
+
+  <div itemprop="text" class="blob-wrapper data type-python ">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-detect-py-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-detect-py-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> cv2</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-detect-py-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> sys</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-detect-py-LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> numpy <span class="pl-k">as</span> np</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-detect-py-LC4" class="blob-code blob-code-inner js-file-line"> </td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-detect-py-LC5" class="blob-code blob-code-inner js-file-line">camera <span class="pl-k">=</span> cv2.VideoCapture(<span class="pl-s"><span class="pl-pds">"</span>video.avi<span class="pl-pds">"</span></span>)</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="file-detect-py-LC6" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="file-detect-py-LC7" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Setup BlobDetector</span></td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L8" class="blob-num js-line-number" data-line-number="8"></td>
+        <td id="file-detect-py-LC8" class="blob-code blob-code-inner js-file-line">detector <span class="pl-k">=</span> cv2.SimpleBlobDetector_create()</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L9" class="blob-num js-line-number" data-line-number="9"></td>
+        <td id="file-detect-py-LC9" class="blob-code blob-code-inner js-file-line">params <span class="pl-k">=</span> cv2.SimpleBlobDetector_Params()</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L10" class="blob-num js-line-number" data-line-number="10"></td>
+        <td id="file-detect-py-LC10" class="blob-code blob-code-inner js-file-line">	 </td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L11" class="blob-num js-line-number" data-line-number="11"></td>
+        <td id="file-detect-py-LC11" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Filter by Area.</span></td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L12" class="blob-num js-line-number" data-line-number="12"></td>
+        <td id="file-detect-py-LC12" class="blob-code blob-code-inner js-file-line">params.filterByArea <span class="pl-k">=</span> <span class="pl-c1">True</span></td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L13" class="blob-num js-line-number" data-line-number="13"></td>
+        <td id="file-detect-py-LC13" class="blob-code blob-code-inner js-file-line">params.minArea <span class="pl-k">=</span> <span class="pl-c1">20000</span></td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L14" class="blob-num js-line-number" data-line-number="14"></td>
+        <td id="file-detect-py-LC14" class="blob-code blob-code-inner js-file-line">params.maxArea <span class="pl-k">=</span> <span class="pl-c1">40000</span></td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L15" class="blob-num js-line-number" data-line-number="15"></td>
+        <td id="file-detect-py-LC15" class="blob-code blob-code-inner js-file-line">	 </td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L16" class="blob-num js-line-number" data-line-number="16"></td>
+        <td id="file-detect-py-LC16" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Filter by Circularity</span></td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L17" class="blob-num js-line-number" data-line-number="17"></td>
+        <td id="file-detect-py-LC17" class="blob-code blob-code-inner js-file-line">params.filterByCircularity <span class="pl-k">=</span> <span class="pl-c1">True</span></td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L18" class="blob-num js-line-number" data-line-number="18"></td>
+        <td id="file-detect-py-LC18" class="blob-code blob-code-inner js-file-line">params.minCircularity <span class="pl-k">=</span> <span class="pl-c1">0.5</span></td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L19" class="blob-num js-line-number" data-line-number="19"></td>
+        <td id="file-detect-py-LC19" class="blob-code blob-code-inner js-file-line"> </td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L20" class="blob-num js-line-number" data-line-number="20"></td>
+        <td id="file-detect-py-LC20" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Filter by Convexity</span></td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L21" class="blob-num js-line-number" data-line-number="21"></td>
+        <td id="file-detect-py-LC21" class="blob-code blob-code-inner js-file-line">params.filterByConvexity <span class="pl-k">=</span> <span class="pl-c1">False</span></td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L22" class="blob-num js-line-number" data-line-number="22"></td>
+        <td id="file-detect-py-LC22" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span>params.minConvexity = 0.87</span></td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L23" class="blob-num js-line-number" data-line-number="23"></td>
+        <td id="file-detect-py-LC23" class="blob-code blob-code-inner js-file-line">	 </td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L24" class="blob-num js-line-number" data-line-number="24"></td>
+        <td id="file-detect-py-LC24" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Filter by Inertia</span></td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L25" class="blob-num js-line-number" data-line-number="25"></td>
+        <td id="file-detect-py-LC25" class="blob-code blob-code-inner js-file-line">params.filterByInertia <span class="pl-k">=</span> <span class="pl-c1">True</span></td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L26" class="blob-num js-line-number" data-line-number="26"></td>
+        <td id="file-detect-py-LC26" class="blob-code blob-code-inner js-file-line">params.minInertiaRatio <span class="pl-k">=</span> <span class="pl-c1">0.8</span></td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L27" class="blob-num js-line-number" data-line-number="27"></td>
+        <td id="file-detect-py-LC27" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L28" class="blob-num js-line-number" data-line-number="28"></td>
+        <td id="file-detect-py-LC28" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Distance Between Blobs</span></td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L29" class="blob-num js-line-number" data-line-number="29"></td>
+        <td id="file-detect-py-LC29" class="blob-code blob-code-inner js-file-line">params.minDistBetweenBlobs <span class="pl-k">=</span> <span class="pl-c1">200</span></td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L30" class="blob-num js-line-number" data-line-number="30"></td>
+        <td id="file-detect-py-LC30" class="blob-code blob-code-inner js-file-line">	 </td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L31" class="blob-num js-line-number" data-line-number="31"></td>
+        <td id="file-detect-py-LC31" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Create a detector with the parameters</span></td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L32" class="blob-num js-line-number" data-line-number="32"></td>
+        <td id="file-detect-py-LC32" class="blob-code blob-code-inner js-file-line">detector <span class="pl-k">=</span> cv2.SimpleBlobDetector_create(params)</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L33" class="blob-num js-line-number" data-line-number="33"></td>
+        <td id="file-detect-py-LC33" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L34" class="blob-num js-line-number" data-line-number="34"></td>
+        <td id="file-detect-py-LC34" class="blob-code blob-code-inner js-file-line"><span class="pl-k">while</span> camera.isOpened():</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L35" class="blob-num js-line-number" data-line-number="35"></td>
+        <td id="file-detect-py-LC35" class="blob-code blob-code-inner js-file-line">	</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L36" class="blob-num js-line-number" data-line-number="36"></td>
+        <td id="file-detect-py-LC36" class="blob-code blob-code-inner js-file-line">	retval, im <span class="pl-k">=</span> camera.read()</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L37" class="blob-num js-line-number" data-line-number="37"></td>
+        <td id="file-detect-py-LC37" class="blob-code blob-code-inner js-file-line">	overlay <span class="pl-k">=</span> im.copy()</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L38" class="blob-num js-line-number" data-line-number="38"></td>
+        <td id="file-detect-py-LC38" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L39" class="blob-num js-line-number" data-line-number="39"></td>
+        <td id="file-detect-py-LC39" class="blob-code blob-code-inner js-file-line">	keypoints <span class="pl-k">=</span> detector.detect(im)</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L40" class="blob-num js-line-number" data-line-number="40"></td>
+        <td id="file-detect-py-LC40" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">for</span> k <span class="pl-k">in</span> keypoints:</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L41" class="blob-num js-line-number" data-line-number="41"></td>
+        <td id="file-detect-py-LC41" class="blob-code blob-code-inner js-file-line">		cv2.circle(overlay, (<span class="pl-c1">int</span>(k.pt[<span class="pl-c1">0</span>]), <span class="pl-c1">int</span>(k.pt[<span class="pl-c1">1</span>])), <span class="pl-c1">int</span>(k.size<span class="pl-k">/</span><span class="pl-c1">2</span>), (<span class="pl-c1">0</span>, <span class="pl-c1">0</span>, <span class="pl-c1">255</span>), <span class="pl-k">-</span><span class="pl-c1">1</span>)</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L42" class="blob-num js-line-number" data-line-number="42"></td>
+        <td id="file-detect-py-LC42" class="blob-code blob-code-inner js-file-line">		cv2.line(overlay, (<span class="pl-c1">int</span>(k.pt[<span class="pl-c1">0</span>])<span class="pl-k">-</span><span class="pl-c1">20</span>, <span class="pl-c1">int</span>(k.pt[<span class="pl-c1">1</span>])), (<span class="pl-c1">int</span>(k.pt[<span class="pl-c1">0</span>])<span class="pl-k">+</span><span class="pl-c1">20</span>, <span class="pl-c1">int</span>(k.pt[<span class="pl-c1">1</span>])), (<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>), <span class="pl-c1">3</span>)</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L43" class="blob-num js-line-number" data-line-number="43"></td>
+        <td id="file-detect-py-LC43" class="blob-code blob-code-inner js-file-line">		cv2.line(overlay, (<span class="pl-c1">int</span>(k.pt[<span class="pl-c1">0</span>]), <span class="pl-c1">int</span>(k.pt[<span class="pl-c1">1</span>])<span class="pl-k">-</span><span class="pl-c1">20</span>), (<span class="pl-c1">int</span>(k.pt[<span class="pl-c1">0</span>]), <span class="pl-c1">int</span>(k.pt[<span class="pl-c1">1</span>])<span class="pl-k">+</span><span class="pl-c1">20</span>), (<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>), <span class="pl-c1">3</span>)</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L44" class="blob-num js-line-number" data-line-number="44"></td>
+        <td id="file-detect-py-LC44" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L45" class="blob-num js-line-number" data-line-number="45"></td>
+        <td id="file-detect-py-LC45" class="blob-code blob-code-inner js-file-line">	opacity <span class="pl-k">=</span> <span class="pl-c1">0.5</span></td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L46" class="blob-num js-line-number" data-line-number="46"></td>
+        <td id="file-detect-py-LC46" class="blob-code blob-code-inner js-file-line">	cv2.addWeighted(overlay, opacity, im, <span class="pl-c1">1</span> <span class="pl-k">-</span> opacity, <span class="pl-c1">0</span>, im)</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L47" class="blob-num js-line-number" data-line-number="47"></td>
+        <td id="file-detect-py-LC47" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L48" class="blob-num js-line-number" data-line-number="48"></td>
+        <td id="file-detect-py-LC48" class="blob-code blob-code-inner js-file-line">	<span class="pl-c"><span class="pl-c">#</span> Uncomment to resize to fit output window if needed</span></td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L49" class="blob-num js-line-number" data-line-number="49"></td>
+        <td id="file-detect-py-LC49" class="blob-code blob-code-inner js-file-line">	<span class="pl-c"><span class="pl-c">#</span>im = cv2.resize(im, None,fx=0.5, fy=0.5, interpolation = cv2.INTER_CUBIC)</span></td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L50" class="blob-num js-line-number" data-line-number="50"></td>
+        <td id="file-detect-py-LC50" class="blob-code blob-code-inner js-file-line">	cv2.imshow(<span class="pl-s"><span class="pl-pds">"</span>Output<span class="pl-pds">"</span></span>, im)</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L51" class="blob-num js-line-number" data-line-number="51"></td>
+        <td id="file-detect-py-LC51" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L52" class="blob-num js-line-number" data-line-number="52"></td>
+        <td id="file-detect-py-LC52" class="blob-code blob-code-inner js-file-line">	k <span class="pl-k">=</span> cv2.waitKey(<span class="pl-c1">1</span>) <span class="pl-k">&amp;</span> <span class="pl-c1"><span class="pl-k">0x</span>ff</span></td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L53" class="blob-num js-line-number" data-line-number="53"></td>
+        <td id="file-detect-py-LC53" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">if</span> k <span class="pl-k">==</span> <span class="pl-c1">27</span>:</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L54" class="blob-num js-line-number" data-line-number="54"></td>
+        <td id="file-detect-py-LC54" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">break</span></td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L55" class="blob-num js-line-number" data-line-number="55"></td>
+        <td id="file-detect-py-LC55" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L56" class="blob-num js-line-number" data-line-number="56"></td>
+        <td id="file-detect-py-LC56" class="blob-code blob-code-inner js-file-line">camera.release()</td>
+      </tr>
+      <tr>
+        <td id="file-detect-py-L57" class="blob-num js-line-number" data-line-number="57"></td>
+        <td id="file-detect-py-LC57" class="blob-code blob-code-inner js-file-line">cv2.destroyAllWindows()</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/Lukse/937b3eab8c4547a65c778324764b28e1/raw/6116c4ca64cda0cab002eb929f781e5682658d2c/detect.py" style="float:right">view raw</a>
+        <a href="https://gist.github.com/Lukse/937b3eab8c4547a65c778324764b28e1#file-detect-py">detect.py</a>
+        hosted with <img draggable="false" class="emoji" alt="❤" src="./» Advanced OpenCV 3 python hole detection_files/2764.svg"> by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<p></p>
+
+                                <div class="clearfix"></div>
+
+                                
+                                
+                                
+                                <div class="clearfix"></div>
+
+                            </article>
+
+                            <!-- COMMENTS -->
+                            <div id="comments" class="comments-list"><h3 class="comments-title">Comments ( <strong>6</strong> )</h3><ol><li class="comment even thread-even depth-1" id="li-comment-1765"><div id="comment-1765" class="comment-box"><header><img alt="" src="./» Advanced OpenCV 3 python hole detection_files/0f823a856d11f0734a5ae65b208b0111" srcset="https://secure.gravatar.com/avatar/0f823a856d11f0734a5ae65b208b0111?s=88&amp;d=https%3A%2F%2Fwww.kurokesu.com%2Fmain%2Fwp-content%2Fthemes%2Ftreeson_%2Fmedia%2F_frontend%2Fimg%2Fdefault-avatar.png&amp;r=g 2x" class="avatar avatar-44 photo grav-hashed grav-hijack" height="44" width="44" id="grav-0f823a856d11f0734a5ae65b208b0111-0"><span class="comment-meta"><time datetime="2017-10-28" class="comment-time">2017-10-28</time><span class="comment-replay"><a rel="nofollow" class="comment-reply-link" href="https://www.kurokesu.com/main/2016/07/25/advanced-opencv-3-python-hole-detection/?replytocom=1765#respond" onclick="return addComment.moveForm( &quot;comment-1765&quot;, &quot;1765&quot;, &quot;respond&quot;, &quot;566&quot; )" aria-label="Reply to varun Risbud">Reply</a></span></span><cite><a href="http://website/" title="varun Risbud" rel="external nofollow" target="_self">varun Risbud</a></cite><div class="clear"></div></header><div class="comment-quote">niceee. 
+where is the sample video?</div></div><ul class="children">
+<li class="comment byuser comment-author-saulius bypostauthor odd alt depth-2" id="li-comment-1766"><div id="comment-1766" class="comment-box"><header><img alt="" src="./» Advanced OpenCV 3 python hole detection_files/e7011ba47c62a2363ec694c3b667b460.jpeg" srcset="https://secure.gravatar.com/avatar/e7011ba47c62a2363ec694c3b667b460?s=88&amp;d=https%3A%2F%2Fwww.kurokesu.com%2Fmain%2Fwp-content%2Fthemes%2Ftreeson_%2Fmedia%2F_frontend%2Fimg%2Fdefault-avatar.png&amp;r=g 2x" class="avatar avatar-44 photo grav-hashed grav-hijack" height="44" width="44" id="grav-e7011ba47c62a2363ec694c3b667b460-0"><span class="comment-meta"><time datetime="2017-10-28" class="comment-time">2017-10-28</time><span class="comment-replay"><a rel="nofollow" class="comment-reply-link" href="https://www.kurokesu.com/main/2016/07/25/advanced-opencv-3-python-hole-detection/?replytocom=1766#respond" onclick="return addComment.moveForm( &quot;comment-1766&quot;, &quot;1766&quot;, &quot;respond&quot;, &quot;566&quot; )" aria-label="Reply to saulius">Reply</a></span></span><cite>saulius</cite><div class="clear"></div></header><div class="comment-quote">Thought it would be enough to have animated GIF.</div></div></li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment even thread-odd thread-alt depth-1" id="li-comment-2419"><div id="comment-2419" class="comment-box"><header><img alt="" src="./» Advanced OpenCV 3 python hole detection_files/147a34decd1b063c02a5fb43c2a8b9e9" srcset="https://secure.gravatar.com/avatar/147a34decd1b063c02a5fb43c2a8b9e9?s=88&amp;d=https%3A%2F%2Fwww.kurokesu.com%2Fmain%2Fwp-content%2Fthemes%2Ftreeson_%2Fmedia%2F_frontend%2Fimg%2Fdefault-avatar.png&amp;r=g 2x" class="avatar avatar-44 photo grav-hashed grav-hijack" height="44" width="44" id="grav-147a34decd1b063c02a5fb43c2a8b9e9-0"><span class="comment-meta"><time datetime="2018-05-17" class="comment-time">2018-05-17</time><span class="comment-replay"><a rel="nofollow" class="comment-reply-link" href="https://www.kurokesu.com/main/2016/07/25/advanced-opencv-3-python-hole-detection/?replytocom=2419#respond" onclick="return addComment.moveForm( &quot;comment-2419&quot;, &quot;2419&quot;, &quot;respond&quot;, &quot;566&quot; )" aria-label="Reply to Sergio">Reply</a></span></span><cite><a href="http://website/" title="Sergio" rel="external nofollow" target="_self">Sergio</a></cite><div class="clear"></div></header><div class="comment-quote">Hello first of all thank you for sharing the code.
+When i run it appear this error: 
+
+Traceback (most recent call last):
+  File "C:\Python27\holes.py", line 8, in 
+  detector = cv2.SimpleBlobDetector_create()
+  AttributeError: 'module' object has no attribute 'SimpleBlobDetector_create'
+
+What can go wrong?
+Regards</div></div><ul class="children">
+<li class="comment byuser comment-author-saulius bypostauthor odd alt depth-2" id="li-comment-2420"><div id="comment-2420" class="comment-box"><header><img alt="" src="./» Advanced OpenCV 3 python hole detection_files/e7011ba47c62a2363ec694c3b667b460.jpeg" srcset="https://secure.gravatar.com/avatar/e7011ba47c62a2363ec694c3b667b460?s=88&amp;d=https%3A%2F%2Fwww.kurokesu.com%2Fmain%2Fwp-content%2Fthemes%2Ftreeson_%2Fmedia%2F_frontend%2Fimg%2Fdefault-avatar.png&amp;r=g 2x" class="avatar avatar-44 photo grav-hashed grav-hijack" height="44" width="44" id="grav-e7011ba47c62a2363ec694c3b667b460-1"><span class="comment-meta"><time datetime="2018-05-17" class="comment-time">2018-05-17</time><span class="comment-replay"><a rel="nofollow" class="comment-reply-link" href="https://www.kurokesu.com/main/2016/07/25/advanced-opencv-3-python-hole-detection/?replytocom=2420#respond" onclick="return addComment.moveForm( &quot;comment-2420&quot;, &quot;2420&quot;, &quot;respond&quot;, &quot;566&quot; )" aria-label="Reply to saulius">Reply</a></span></span><cite>saulius</cite><div class="clear"></div></header><div class="comment-quote">Hi Sergio, please check python and opencv versions</div></div></li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment even thread-even depth-1" id="li-comment-2422"><div id="comment-2422" class="comment-box"><header><img alt="" src="./» Advanced OpenCV 3 python hole detection_files/147a34decd1b063c02a5fb43c2a8b9e9" srcset="https://secure.gravatar.com/avatar/147a34decd1b063c02a5fb43c2a8b9e9?s=88&amp;d=https%3A%2F%2Fwww.kurokesu.com%2Fmain%2Fwp-content%2Fthemes%2Ftreeson_%2Fmedia%2F_frontend%2Fimg%2Fdefault-avatar.png&amp;r=g 2x" class="avatar avatar-44 photo grav-hashed grav-hijack" height="44" width="44" id="grav-147a34decd1b063c02a5fb43c2a8b9e9-1"><span class="comment-meta"><time datetime="2018-05-17" class="comment-time">2018-05-17</time><span class="comment-replay"><a rel="nofollow" class="comment-reply-link" href="https://www.kurokesu.com/main/2016/07/25/advanced-opencv-3-python-hole-detection/?replytocom=2422#respond" onclick="return addComment.moveForm( &quot;comment-2422&quot;, &quot;2422&quot;, &quot;respond&quot;, &quot;566&quot; )" aria-label="Reply to Sergio">Reply</a></span></span><cite><a href="http://website/" title="Sergio" rel="external nofollow" target="_self">Sergio</a></cite><div class="clear"></div></header><div class="comment-quote">I fixed it. You were right, must be some difference between my version and yours. Likely, I found the same instruction in other post and it worked for me: cv2.SimpleBlobDetector() without "_create"
+Im a beginner but hopefully i could help somebody.
+Again, thank you so much for sharing Saulius</div></div><ul class="children">
+<li class="comment byuser comment-author-saulius bypostauthor odd alt depth-2" id="li-comment-2423"><div id="comment-2423" class="comment-box"><header><img alt="" src="./» Advanced OpenCV 3 python hole detection_files/e7011ba47c62a2363ec694c3b667b460.jpeg" srcset="https://secure.gravatar.com/avatar/e7011ba47c62a2363ec694c3b667b460?s=88&amp;d=https%3A%2F%2Fwww.kurokesu.com%2Fmain%2Fwp-content%2Fthemes%2Ftreeson_%2Fmedia%2F_frontend%2Fimg%2Fdefault-avatar.png&amp;r=g 2x" class="avatar avatar-44 photo grav-hashed grav-hijack" height="44" width="44" id="grav-e7011ba47c62a2363ec694c3b667b460-2"><span class="comment-meta"><time datetime="2018-05-17" class="comment-time">2018-05-17</time><span class="comment-replay"><a rel="nofollow" class="comment-reply-link" href="https://www.kurokesu.com/main/2016/07/25/advanced-opencv-3-python-hole-detection/?replytocom=2423#respond" onclick="return addComment.moveForm( &quot;comment-2423&quot;, &quot;2423&quot;, &quot;respond&quot;, &quot;566&quot; )" aria-label="Reply to saulius">Reply</a></span></span><cite>saulius</cite><div class="clear"></div></header><div class="comment-quote">Glad to hear, Sergio!</div></div></li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ol><div class="pagination aligncenter comments"><nav class="mythemes-nav-inline"></nav></div>	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://www.kurokesu.com/main/2016/07/25/advanced-opencv-3-python-hole-detection/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="https://www.kurokesu.com/main/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<button type="submit" class="btn submit-comment">Comment</button><p class="comment-notes">Your email address will not be published.</p><div class="textarea row-fluid"><p class="comment-form-comment textarea user-not-logged-in"><textarea id="comment" name="comment" cols="45" rows="10" class="span12" aria-required="true"></textarea></p></div><div class="field"><p class="comment-form-author input"><input class="required span7" value="Nickname ( required )" onfocus="if (this.value == &#39;Nickname ( required )&#39;) {this.value = &#39;&#39;;}" onblur="if (this.value == &#39;&#39; ) { this.value = &#39;Nickname ( required )&#39;;}" id="author" name="author" type="text" size="30"></p>
+<p class="comment-form-email input"><input class="required span7" value="E-mail ( required )" onfocus="if (this.value == &#39;E-mail ( required )&#39;) {this.value = &#39;&#39;;}" onblur="if (this.value == &#39;&#39; ) { this.value = &#39;E-mail ( required )&#39;;}" id="email" name="email" type="text" size="30"></p>
+<p class="comment-form-url input"><input class="span7" value="Website" onfocus="if (this.value == &#39;Website&#39;) {this.value = &#39;&#39;;}" onblur="if (this.value == &#39;&#39; ) { this.value = &#39;Website&#39;;}" id="url" name="url" type="text" size="30"></p></div>
+<p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments">Notify me of follow-up comments by email.</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Notify me of new posts by email.</label></p><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Comment"> <input type="hidden" name="comment_post_ID" value="566" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+<input type="hidden" name="FMU5NKYLcRnU" id="FMU5NKYLcRnU"></p><noscript><strong><u><font color="red" size="5">To leave a comment please enable JavaScript in your browser settings!</font></u></strong></noscript>			</form>
+			</div><!-- #respond -->
+	<div class="clearfix"></div></div>
+                
+                </div>
+                </section>
+
+            <aside class="col-sm-4 col-md-3 col-lg-3 sidebar-to-right"><div id="mythemes_widget_post_tags-2" class="widget mythemes_widget_post_tags"><h4 class="widget-title"><i></i>Tags</h4><div class="tagcloud"><a href="https://www.kurokesu.com/main/tag/computer-vision/" rel="tag" target="_self" title="8" style="width: 141px;"><span><span class="icon"><i class="mythemes-icon-tag"></i></span><span class="tag-name">Computer vision</span><span class="counter" style="margin-left: 0px;">8</span></span></a><a href="https://www.kurokesu.com/main/tag/opencv/" rel="tag" target="_self" title="9" style="width: 91px;"><span><span class="icon"><i class="mythemes-icon-tag"></i></span><span class="tag-name">OpenCV</span><span class="counter" style="margin-left: 1px;">9</span></span></a><a href="https://www.kurokesu.com/main/tag/usb-camera/" rel="tag" target="_self" title="9" style="width: 115px;"><span><span class="icon"><i class="mythemes-icon-tag"></i></span><span class="tag-name">USB camera</span><span class="counter" style="margin-left: 0px;">9</span></span></a><div class="clearfix"></div><div class="clear clearfix"></div></div></div><div id="mythemes_widget_articles-2" class="widget mythemes_widget_articles"><h4 class="widget-title"><i></i>Recent posts</h4><ul><li><div class="post-thumbnail"><a href="https://www.kurokesu.com/main/2018/07/09/accurately-measure-height-with-microscope/" title="Accurately measure height with microscope" target="_self" rel=""><img width="150" height="150" src="./» Advanced OpenCV 3 python hole detection_files/IMG_7798_r-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Accurately measure height with microscope"></a></div><h5><a href="https://www.kurokesu.com/main/2018/07/09/accurately-measure-height-with-microscope/" title="Accurately measure height with microscope" target="_self" rel="">Accurately measure height with microscope</a></h5><p>As the subject implies this post describes a way to mea ...</p><div class="clearfix"></div></li><li><div class="post-thumbnail"><a href="https://www.kurokesu.com/main/2018/06/25/second-life-for-x18-motorized-lens/" title="Second life for x18 motorized lens" target="_self" rel=""><img width="150" height="150" src="./» Advanced OpenCV 3 python hole detection_files/IMG_7699_r-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Second life for x18 motorized lens"></a></div><h5><a href="https://www.kurokesu.com/main/2018/06/25/second-life-for-x18-motorized-lens/" title="Second life for x18 motorized lens" target="_self" rel="">Second life for x18 motorized lens</a></h5><p>Had this 18x (5.4-96mm focal distance) salvaged zoom le ...</p><div class="clearfix"></div></li><li><div class="post-thumbnail"><a href="https://www.kurokesu.com/main/2018/01/05/big-scary-laser/" title="Big scary laser" target="_self" rel=""><img width="150" height="150" src="./» Advanced OpenCV 3 python hole detection_files/IMG_6530_r_with_decal-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Big scary laser"></a></div><h5><a href="https://www.kurokesu.com/main/2018/01/05/big-scary-laser/" title="Big scary laser" target="_self" rel="">Big scary laser</a></h5><p>Or not. I have been begging Santa for fiber laser for y ...</p><div class="clearfix"></div></li><li><div class="post-thumbnail"><a href="https://www.kurokesu.com/main/2018/01/04/kurokesu-legal-status-update/" title="Kurokesu legal status update" target="_self" rel=""><img width="150" height="150" src="./» Advanced OpenCV 3 python hole detection_files/kurokesu_-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Kurokesu legal status update"></a></div><h5><a href="https://www.kurokesu.com/main/2018/01/04/kurokesu-legal-status-update/" title="Kurokesu legal status update" target="_self" rel="">Kurokesu legal status update</a></h5><p>It has been almost a month since Kurokesu stepped over  ...</p><div class="clearfix"></div></li><li><div class="post-thumbnail"><a href="https://www.kurokesu.com/main/2017/09/18/logitech-brio-4k-webcam-rework-instructions/" title="Logitech Brio 4K webcam rework instructions" target="_self" rel=""><img width="150" height="150" src="./» Advanced OpenCV 3 python hole detection_files/IMG_6012_r-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Logitech Brio 4K webcam rework instructions"></a></div><h5><a href="https://www.kurokesu.com/main/2017/09/18/logitech-brio-4k-webcam-rework-instructions/" title="Logitech Brio 4K webcam rework instructions" target="_self" rel="">Logitech Brio 4K webcam rework instructions</a></h5><p>Recently Logitech released it's newest camera BRIO 4K ( ...</p><div class="clearfix"></div></li></ul></div></aside>            
+            </div>
+        </div>
+    </div><iframe src="./» Advanced OpenCV 3 python hole detection_files/portal.html" id="st_gdpr_iframe" style="width: 0px; height: 0px; position: absolute; left: -5000px;"></iframe>
+
+
+<script type="text/javascript">
+function fP2JJafeMNSso() {
+	var o=document.getElementById("FMU5NKYLcRnU");
+	o.value="JEqHHwHRSqqY";
+}
+var bvLKp8EKwEqaF = document.getElementById("submit");
+if (bvLKp8EKwEqaF) {
+	var caGvTmGlfnsmT = document.getElementById("FMU5NKYLcRnU");
+	var p7IWQpuGN2PNQ = bvLKp8EKwEqaF.parentNode;
+	p7IWQpuGN2PNQ.appendChild(caGvTmGlfnsmT, bvLKp8EKwEqaF);
+	addHandler(bvLKp8EKwEqaF, "mousedown", fP2JJafeMNSso);
+	addHandler(bvLKp8EKwEqaF, "keypress", fP2JJafeMNSso);
+}
+</script>
+        <footer>
+            
+            <div class="mythemes-black-side">
+                <div class="mythemes-copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <p>© Kurokesu 2015-2018</p>
+                            </div>
+                                                        <div class="col-sm-6 col-md-6 col-lg-6">
+                                <div class="mythemes-social">
+                                    <a href="https://twitter.com/kurokesu" class="mythemes-icon-tumblr" target="_blank"></a><a href="https://www.facebook.com/saulius.lukse" class="mythemes-icon-facebook" target="_blank"></a><a href="http://kurokesu.com/main/index.php/feed/" class="mythemes-icon-rss" target="_blank"></a>                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                        </div>
+            <script type="text/javascript"></script>        </footer>
+
+        <div class="mythemes-scroll-up show-scroll-up">
+            <a href="javascript:void(null);"><i class="mythemes-icon-up-open first"></i><i class="mythemes-icon-up-open second"></i></a>
+        </div>
+
+        <div class="mythemes-visible-xs"></div>
+        <div class="mythemes-visible-sm"></div>
+        <div class="mythemes-visible-md"></div>
+        <div class="mythemes-visible-lg"></div>
+
+        	<div style="display:none">
+	<div class="grofile-hash-map-0f823a856d11f0734a5ae65b208b0111">
+	</div>
+	<div class="grofile-hash-map-e7011ba47c62a2363ec694c3b667b460">
+	</div>
+	<div class="grofile-hash-map-147a34decd1b063c02a5fb43c2a8b9e9">
+	</div>
+	</div>
+<script>
+    jQuery(document).ready(function () {
+		jQuery.post('https://www.kurokesu.com/main?ga_action=googleanalytics_get_script', {action: 'googleanalytics_get_script'}, function(response) {
+			var s = document.createElement("script");
+			s.type = "text/javascript";
+			s.innerHTML = response;
+			jQuery("head").append(s);
+		});
+    });
+</script><script type="text/javascript">
+/* <![CDATA[ */
+var PowerStatsParams = {"ajaxurl":"https:\/\/www.kurokesu.com\/main\/wp-admin\/admin-ajax.php","ci":"YTo0OntzOjEyOiJjb250ZW50X3R5cGUiO3M6NDoicG9zdCI7czo4OiJjYXRlZ29yeSI7czoxNjoiMTU3LDE1MywyNCw2NCwxNCI7czoxMDoiY29udGVudF9pZCI7aTo1NjY7czo2OiJhdXRob3IiO3M6Nzoic2F1bGl1cyI7fQ==.7f3cfacf8b41009f4ef3de019fb93feb"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./» Advanced OpenCV 3 python hole detection_files/wp-power-stats.js.téléchargement"></script>
+<script type="text/javascript" src="./» Advanced OpenCV 3 python hole detection_files/devicepx-jetpack.js.téléchargement"></script>
+<script type="text/javascript" src="./» Advanced OpenCV 3 python hole detection_files/gprofiles.js.téléchargement"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./» Advanced OpenCV 3 python hole detection_files/wpgroho.js.téléchargement"></script>
+<script type="text/javascript" src="./» Advanced OpenCV 3 python hole detection_files/bootstrap.min.js.téléchargement"></script>
+<script type="text/javascript" src="./» Advanced OpenCV 3 python hole detection_files/jquery.mousewheel.js.téléchargement"></script>
+<script type="text/javascript" src="./» Advanced OpenCV 3 python hole detection_files/jquery.jscrollpane.min.js.téléchargement"></script>
+<script type="text/javascript" src="./» Advanced OpenCV 3 python hole detection_files/wow.js.téléchargement"></script>
+<script type="text/javascript" src="./» Advanced OpenCV 3 python hole detection_files/functions.js.téléchargement"></script>
+<script type="text/javascript" src="./» Advanced OpenCV 3 python hole detection_files/comment-reply.min.js.téléchargement"></script>
+<script type="text/javascript" src="./» Advanced OpenCV 3 python hole detection_files/wp-embed.min.js.téléchargement"></script>
+<script type="text/javascript" src="./» Advanced OpenCV 3 python hole detection_files/lib.core.js.téléchargement"></script>
+<script type="text/javascript" src="./» Advanced OpenCV 3 python hole detection_files/lib.view.js.téléchargement"></script>
+<script type="text/javascript" src="./» Advanced OpenCV 3 python hole detection_files/imagesloaded.min.js.téléchargement"></script>
+<script type="text/javascript" src="./» Advanced OpenCV 3 python hole detection_files/masonry.min.js.téléchargement"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var mythemes_args = {"menu":"1","tags":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./» Advanced OpenCV 3 python hole detection_files/modules.js.téléchargement"></script>
+<script type="text/javascript" src="./» Advanced OpenCV 3 python hole detection_files/client.js.téléchargement"></script>
+<script type="text/javascript" src="./» Advanced OpenCV 3 python hole detection_files/client.js(1).téléchargement"></script>
+<script type="text/javascript" src="./» Advanced OpenCV 3 python hole detection_files/tag.item.js.téléchargement"></script>
+<script type="text/javascript" src="./» Advanced OpenCV 3 python hole detection_files/tag.ui.js.téléchargement"></script>
+<script type="text/javascript" src="./» Advanced OpenCV 3 python hole detection_files/handler.image.js.téléchargement"></script>
+<script type="text/javascript" id="slb_footer">/* <![CDATA[ */if ( !!window.jQuery ) {(function($){$(document).ready(function(){if ( !!window.SLB && SLB.has_child('View.init') ) { SLB.View.init({"ui_autofit":true,"ui_animate":false,"slideshow_autostart":false,"slideshow_duration":"6","group_loop":true,"ui_overlay_opacity":"0.8","ui_title_default":false,"theme_default":"slb_default","ui_labels":{"loading":"Loading","close":"Close","nav_next":"Next","nav_prev":"Previous","slideshow_start":"Start slideshow","slideshow_stop":"Stop slideshow","group_status":"Item %current% of %total%"}}); }
+if ( !!window.SLB && SLB.has_child('View.assets') ) { {$.extend(SLB.View.assets, {"555573004":{"id":569,"type":"image","source":"https:\/\/www.kurokesu.com\/main\/wp-content\/uploads\/2016\/07\/centers.png","internal":true,"sizes":{"thumbnail":{"file":"centers-150x150.png","width":150,"height":150,"mime-type":"image\/png"},"medium":{"file":"centers-300x169.png","width":300,"height":169,"mime-type":"image\/png"},"medium_large":{"file":"centers-768x432.png","width":768,"height":432,"mime-type":"image\/png"},"large":{"file":"centers-1024x576.png","width":1024,"height":576,"mime-type":"image\/png"},"mythemes-classic":{"file":"centers-1140x515.png","width":1140,"height":515,"mime-type":"image\/png"},"grid-thumbnail":{"file":"centers-555x440.png","width":555,"height":440,"mime-type":"image\/png"},"original":{"file":"2016\/07\/centers.png","width":1903,"height":1071}},"image_meta":{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0","keywords":[]},"description":"","title":"centers","caption":""},"457117210":{"id":576,"type":"image","source":"https:\/\/www.kurokesu.com\/main\/wp-content\/uploads\/2016\/07\/out.gif","internal":true,"sizes":{"thumbnail":{"file":"out-150x150.gif","width":150,"height":150,"mime-type":"image\/gif"},"medium":{"file":"out-300x169.gif","width":300,"height":169,"mime-type":"image\/gif"},"original":{"file":"2016\/07\/out.gif","width":500,"height":281}},"image_meta":{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0","keywords":[]},"description":"","title":"out","caption":""}});} }
+/* THM */
+if ( !!window.SLB && SLB.has_child('View.extend_theme') ) { SLB.View.extend_theme('slb_baseline',{"name":"Baseline","parent":"","styles":[{"handle":"base","uri":"https:\/\/www.kurokesu.com\/main\/wp-content\/plugins\/simple-lightbox\/themes\/baseline\/css\/style.css","deps":[]}],"layout_raw":"<div class=\"slb_container\"><div class=\"slb_content\">{{item.content}}<div class=\"slb_nav\"><span class=\"slb_prev\">{{ui.nav_prev}}<\/span><span class=\"slb_next\">{{ui.nav_next}}<\/span><\/div><div class=\"slb_controls\"><span class=\"slb_close\">{{ui.close}}<\/span><span class=\"slb_slideshow\">{{ui.slideshow_control}}<\/span><\/div><div class=\"slb_loading\">{{ui.loading}}<\/div><\/div><div class=\"slb_details\"><div class=\"inner\"><div class=\"slb_data\"><div class=\"slb_data_content\"><span class=\"slb_data_title\">{{item.title}}<\/span><span class=\"slb_group_status\">{{ui.group_status}}<\/span><div class=\"slb_data_desc\">{{item.description}}<\/div><\/div><\/div><div class=\"slb_nav\"><span class=\"slb_prev\">{{ui.nav_prev}}<\/span><span class=\"slb_next\">{{ui.nav_next}}<\/span><\/div><\/div><\/div><\/div>"}); }if ( !!window.SLB && SLB.has_child('View.extend_theme') ) { SLB.View.extend_theme('slb_default',{"name":"Default (Light)","parent":"slb_baseline","styles":[{"handle":"base","uri":"https:\/\/www.kurokesu.com\/main\/wp-content\/plugins\/simple-lightbox\/themes\/default\/css\/style.css","deps":[]}]}); }})})(jQuery);}/* ]]> */</script>
+<script type="text/javascript" id="slb_context">/* <![CDATA[ */if ( !!window.jQuery ) {(function($){$(document).ready(function(){if ( !!window.SLB ) { {$.extend(SLB, {"context":["public","user_guest"]});} }})})(jQuery);}/* ]]> */</script>
+<script type="text/javascript" src="./» Advanced OpenCV 3 python hole detection_files/e-201849.js.téléchargement" async="async" defer="defer"></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:6.8',blog:'102451689',post:'566',tz:'2',srv:'www.kurokesu.com'} ]);
+	_stq.push([ 'clickTrackerInit', '102451689', '566' ]);
+</script>
+
+            
+
+<!-- Dynamic page generated in 0.873 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2018-12-03 02:46:09 -->
+
+<!-- Compression = gzip --><img src="./» Advanced OpenCV 3 python hole detection_files/g.gif" alt=":)" width="6" height="5" id="wpstats"><div id="slb_viewer_wrap"><div id="slb_viewer_slb_default" class="slb_viewer slb_theme_slb_default slb_theme_slb_baseline item_multi" style="display: block;"><div class="slb_viewer_layout" style="display: block; top: 763px;"><div class="slb_container"><div class="slb_content" style="width: 894px; height: 503px;"><span class="slb_template_tag slb_template_tag_item slb_template_tag_item_content" style="display: inline;"><img src="https://www.kurokesu.com/main/wp-content/uploads/2016/07/centers.png"></span><div class="slb_nav"><span class="slb_prev"><span class="slb_template_tag slb_template_tag_ui slb_template_tag_ui_nav_prev" style="display: block;">Previous</span></span><span class="slb_next"><span class="slb_template_tag slb_template_tag_ui slb_template_tag_ui_nav_next" style="display: block;">Next</span></span></div><div class="slb_controls"><span class="slb_close"><span class="slb_template_tag slb_template_tag_ui slb_template_tag_ui_close" style="display: block;">Close</span></span><span class="slb_slideshow"><span class="slb_template_tag slb_template_tag_ui slb_template_tag_ui_slideshow_control" style="display: block;">Start slideshow</span></span></div><div class="slb_loading" style="display: none;"><span class="slb_template_tag slb_template_tag_ui slb_template_tag_ui_loading" style="display: inline;">Loading</span></div></div><div class="slb_details" style=""><div class="inner"><div class="slb_data"><div class="slb_data_content"><span class="slb_data_title"><span class="slb_template_tag slb_template_tag_item slb_template_tag_item_title"></span></span><span class="slb_group_status"><span class="slb_template_tag slb_template_tag_ui slb_template_tag_ui_group_status">Item 1 of 2</span></span><div class="slb_data_desc"><span class="slb_template_tag slb_template_tag_item slb_template_tag_item_description"></span></div></div></div><div class="slb_nav"><span class="slb_prev"><span class="slb_template_tag slb_template_tag_ui slb_template_tag_ui_nav_prev">Previous</span></span><span class="slb_next"><span class="slb_template_tag slb_template_tag_ui slb_template_tag_ui_nav_next">Next</span></span></div></div></div></div></div><div class="slb_viewer_overlay" style="display: block; opacity: 0.8;"></div></div></div></body></html>
